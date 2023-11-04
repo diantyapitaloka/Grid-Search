@@ -1,4 +1,5 @@
 ## Grid Search
+Grid search allows us to test several parameters at once on a model. For example, we can test several numbers of clusters for a K-Means model and see how the K-Means model performs against different K values. To better understand grid search, we will try grid search using SKLearn.
 
 ## Prepare Dataset
 First, download the file "Salary_Data.csv"
