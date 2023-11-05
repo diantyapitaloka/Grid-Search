@@ -57,6 +57,8 @@ Finally, we can visualize the SVR with the grid search results parameters. It ca
 - plt.scatter(X, y)
 - plt.plot(X, new_model.predict(X))
 
+Grid search will save a lot of time in finding the best parameters of the machine learning model.
+
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/f96a617a-6d48-4844-bef3-3ce8b8d1cc89)
 
-Grid search will save a lot of time in finding the best parameters of the machine learning model.
+
