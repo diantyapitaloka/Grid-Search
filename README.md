@@ -83,4 +83,5 @@ Grid search will save a lot of time in finding the best parameters of the machin
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/f96a617a-6d48-4844-bef3-3ce8b8d1cc89)
 
-
+## 🍧🍨🍩 License 🍩🍨🍧
+- Copyright by Diantya Pitaloka
