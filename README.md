@@ -6,6 +6,7 @@
 - Users must define a "param_grid" dictionary that specifies exactly which hyperparameters to test and the discrete values for each. The size of this search space directly impacts the total execution time, as every new value increases the number of required iterations.
 - By analyzing the gap between training and validation scores during the search, you can detect if certain parameter combinations are causing the model to overfit. This allows you to select a configuration that generalizes well to new, unseen data rather than just memorizing the training set.
 - Once the search concludes, the algorithm stores the "best estimator" which represents the model instance that achieved the highest score. You can then immediately use this optimized model to make predictions without needing to re-train it manually.
+- The total number of models trained is the product of the number of values in each parameter list multiplied by the number of cross-validation folds. Because of this exponential growth, grid search is best suited for models with a relatively small number of tuning options.
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
 
