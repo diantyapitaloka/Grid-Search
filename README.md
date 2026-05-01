@@ -3,6 +3,7 @@
 - The algorithm evaluates each parameter set using a specific metric, such as accuracy or F1-score, to determine which combination yields the best results. By comparing these scores, you can objectively identify the most effective settings for your specific dataset.
 - Most grid search implementations utilize K-fold cross-validation to ensure that the performance metrics are reliable and not due to chance. This process involves splitting the data multiple times to validate that the chosen parameters perform consistently across different subsets.
 - While it can be computationally expensive, grid search automates the tedious task of manually tweaking individual settings to find the "sweet spot" for a model. It replaces trial-and-error guesswork with a structured, repeatable experiment that improves overall model quality.
+- Users must define a "param_grid" dictionary that specifies exactly which hyperparameters to test and the discrete values for each. The size of this search space directly impacts the total execution time, as every new value increases the number of required iterations.
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
 
