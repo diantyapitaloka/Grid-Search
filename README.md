@@ -15,8 +15,7 @@
 - Exhaustive exploration ensures that every possible intersection of your chosen settings is meticulously checked for quality. This comprehensive approach guarantees that no potential "peak" in performance is overlooked within the sandbox you have constructed.
 - Categorical tuning becomes much simpler because you can test non-numerical options like different types of solvers or activation functions side-by-side. The system treats these labels as distinct paths, allowing the data to reveal which logic best fits the underlying patterns.
 - Resource management is a critical consideration since the workload scales linearly with every new fold added to the validation cycle. Users must strategically pick their ranges to prevent the hardware from becoming overwhelmed by a massive queue of training tasks.
-
-Baseline establishment is often the primary goal, providing a solid benchmark that more advanced or "lucky" optimization methods must beat. It creates a "floor" for performance, ensuring you never settle for a model that is less than the best available within your specified constraints.
+- Baseline establishment is often the primary goal, providing a solid benchmark that more advanced or "lucky" optimization methods must beat. It creates a "floor" for performance, ensuring you never settle for a model that is less than the best available within your specified constraints.
 
 Hyperparameter interaction is frequently uncovered, showing how the shift in one setting might require a corresponding adjustment in another to maintain balance. These hidden relationships are often too complex to guess manually but become obvious once the entire grid is mapped out.
 
