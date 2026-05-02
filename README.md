@@ -11,6 +11,7 @@
 - Using a grid search ensures that your tuning process is documented and can be easily replicated by other researchers or developers. This adds a layer of scientific rigor to your workflow, making it clear exactly how the final model configuration was reached.
 - Grid search allows us to test several parameters at once on a model. For example, we can test several numbers of clusters for a K-Means model and see how the K-Means model performs against different K values. To better understand grid search, we will try grid search using SKLearn.
 - The algorithm evaluates each parameter set using a specific metric, such as accuracy or F1-score, to determine which combination yields the best results. By comparing these scores, you can objectively identify the most effective settings for your specific dataset.
+- Most grid search implementations utilize K-fold cross-validation to ensure that the performance metrics are reliable and not due to chance. This process involves splitting the data multiple times to validate that the chosen parameters perform consistently across different subsets.
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
 
