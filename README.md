@@ -9,6 +9,7 @@
 - The total number of models trained is the product of the number of values in each parameter list multiplied by the number of cross-validation folds. Because of this exponential growth, grid search is best suited for models with a relatively small number of tuning options.
 - Many libraries allow grid search to run multiple jobs in parallel to significantly reduce the total time required for the exhaustive search. By leveraging multiple CPU cores, you can evaluate dozens of parameter combinations simultaneously.
 - Using a grid search ensures that your tuning process is documented and can be easily replicated by other researchers or developers. This adds a layer of scientific rigor to your workflow, making it clear exactly how the final model configuration was reached.
+- Grid search allows us to test several parameters at once on a model. For example, we can test several numbers of clusters for a K-Means model and see how the K-Means model performs against different K values. To better understand grid search, we will try grid search using SKLearn.
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
 
