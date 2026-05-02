@@ -12,6 +12,23 @@
 - Using a grid search ensures that your tuning process is documented and can be easily replicated by other researchers or developers. This adds a layer of scientific rigor to your workflow, making it clear exactly how the final model configuration was reached.
 - Grid search allows us to test several parameters at once on a model. For example, we can test several numbers of clusters for a K-Means model and see how the K-Means model performs against different K values. To better understand grid search, we will try grid search using SKLearn.
 - The algorithm evaluates each parameter set using a specific metric, such as accuracy or F1-score, to determine which combination yields the best results. By comparing these scores, you can objectively identify the most effective settings for your specific dataset.
+- Exhaustive exploration ensures that every possible intersection of your chosen settings is meticulously checked for quality. This comprehensive approach guarantees that no potential "peak" in performance is overlooked within the sandbox you have constructed.
+
+Categorical tuning becomes much simpler because you can test non-numerical options like different types of solvers or activation functions side-by-side. The system treats these labels as distinct paths, allowing the data to reveal which logic best fits the underlying patterns.
+
+Resource management is a critical consideration since the workload scales linearly with every new fold added to the validation cycle. Users must strategically pick their ranges to prevent the hardware from becoming overwhelmed by a massive queue of training tasks.
+
+Baseline establishment is often the primary goal, providing a solid benchmark that more advanced or "lucky" optimization methods must beat. It creates a "floor" for performance, ensuring you never settle for a model that is less than the best available within your specified constraints.
+
+Hyperparameter interaction is frequently uncovered, showing how the shift in one setting might require a corresponding adjustment in another to maintain balance. These hidden relationships are often too complex to guess manually but become obvious once the entire grid is mapped out.
+
+Search space refinement allows you to start with a broad, low-resolution grid before "zooming in" on the most promising areas with a tighter second pass. This hierarchical strategy conserves energy while still converging on the absolute most precise values for your variables.
+
+Predictability of duration is a major benefit, as you can calculate exactly how many iterations will occur before the process even begins. Unlike some random or adaptive methods, there is no uncertainty regarding when the results will be ready for review.
+
+Statistical significance is bolstered because the process relies on consistent evaluation logic across every single candidate version of the model. This uniform treatment ensures that any improvement in the score is a result of the parameters themselves rather than a change in the testing environment.
+
+Knowledge transfer is facilitated when you share the grid results with teammates, as it illustrates which regions of the parameter space were fruitful and which were dead ends. This shared insight prevents others from wasting time exploring configurations that have already been proven ineffective.
 
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
