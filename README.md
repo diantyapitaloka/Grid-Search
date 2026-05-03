@@ -18,8 +18,7 @@
 - Baseline establishment is often the primary goal, providing a solid benchmark that more advanced or "lucky" optimization methods must beat. It creates a "floor" for performance, ensuring you never settle for a model that is less than the best available within your specified constraints.
 - Hyperparameter interaction is frequently uncovered, showing how the shift in one setting might require a corresponding adjustment in another to maintain balance. These hidden relationships are often too complex to guess manually but become obvious once the entire grid is mapped out.
 - Search space refinement allows you to start with a broad, low-resolution grid before "zooming in" on the most promising areas with a tighter second pass. This hierarchical strategy conserves energy while still converging on the absolute most precise values for your variables.
-
-Predictability of duration is a major benefit, as you can calculate exactly how many iterations will occur before the process even begins. Unlike some random or adaptive methods, there is no uncertainty regarding when the results will be ready for review.
+- Predictability of duration is a major benefit, as you can calculate exactly how many iterations will occur before the process even begins. Unlike some random or adaptive methods, there is no uncertainty regarding when the results will be ready for review.
 
 Statistical significance is bolstered because the process relies on consistent evaluation logic across every single candidate version of the model. This uniform treatment ensures that any improvement in the score is a result of the parameters themselves rather than a change in the testing environment.
 
