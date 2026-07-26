@@ -22,8 +22,7 @@
 - Statistical significance is bolstered because the process relies on consistent evaluation logic across every single candidate version of the model. Hence, the uniform treatment ensures that any improvement in the score is a result of the parameters themselves rather than a change in the testing environment.
 - Knowledge transfer is facilitated when you share the grid results with teammates, as it is illustrates on which regions of the parameter space were fruitful and which were dead ends. Hence, this shared insight prevents others from wasting time exploring configurations that have already been proven ineffective.
 - Combinatorial Explosion (The Curse of Dimensionality): Adding even one additional hyperparameter causes the total number of fits to grow exponentially rather than linearly, making pure grid search practically impossible for complex architectures like deep neural networks.
-
-Vulnerability to Rigid Boundaries: Grid Search is strictly confined to the explicit values you define; if the true optimal setting lies just outside your chosen range or between two coarsely spaced points, the search will completely miss it.
+- Vulnerability to Rigid Boundaries: Grid Search is strictly confined to the explicit values you define; if the true optimal setting lies just outside your chosen range or between two coarsely spaced points, the search will completely miss it.
 
 Contrast with Random Search: Unlike Random Search—which samples continuously from a probability distribution and often finds better configurations in fewer iterations—Grid Search spends equal computational effort evaluating unimportant or low-impact hyperparameters across a rigid grid.
 
