@@ -29,8 +29,7 @@
 - Sensitivity to the Chosen Metric: Optimizing for different scoring metrics (such as Precision versus ROC-AUC) on the exact same grid can yield completely different "winning" hyperparameter sets, making your evaluation choice just as important as the parameter range itself.
 - Data Leakage Prevention via Pipelines: When combined with preprocessing tasks like scaling or missing-value imputation, running Grid Search within a pipeline ensures that transformer steps are fit strictly on training folds, keeping validation folds completely uncontaminated.
 - Early-Stopping Efficiency (Halving Search): Advanced variants (such as Successive Halving) improve upon standard grid search by testing all candidates on a small subset of the data first, iteratively discarding low-performing combinations before training the top contenders on full datasets.
-
-Guaranteed Determinism: Because it systematically checks fixed coordinates rather than relying on random sampling or probabilistic guessing, Grid Search yields 100% reproducible results every single time it is run on the same dataset.
+- Guaranteed Determinism: Because it systematically checks fixed coordinates rather than relying on random sampling or probabilistic guessing, Grid Search yields 100% reproducible results every single time it is run on the same dataset.
 
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
