@@ -21,6 +21,23 @@
 - Predictability of duration is a major benefit, as you can calculate exactly how many iterations will occur before the process even begins. Unlike some random or adaptive methods, there is no uncertainty regarding when the results will be ready for review.
 - Statistical significance is bolstered because the process relies on consistent evaluation logic across every single candidate version of the model. Hence, the uniform treatment ensures that any improvement in the score is a result of the parameters themselves rather than a change in the testing environment.
 - Knowledge transfer is facilitated when you share the grid results with teammates, as it is illustrates on which regions of the parameter space were fruitful and which were dead ends. Hence, this shared insight prevents others from wasting time exploring configurations that have already been proven ineffective.
+- Combinatorial Explosion (The Curse of Dimensionality): Adding even one additional hyperparameter causes the total number of fits to grow exponentially rather than linearly, making pure grid search practically impossible for complex architectures like deep neural networks.
+
+Vulnerability to Rigid Boundaries: Grid Search is strictly confined to the explicit values you define; if the true optimal setting lies just outside your chosen range or between two coarsely spaced points, the search will completely miss it.
+
+Contrast with Random Search: Unlike Random Search—which samples continuously from a probability distribution and often finds better configurations in fewer iterations—Grid Search spends equal computational effort evaluating unimportant or low-impact hyperparameters across a rigid grid.
+
+Risk of Validation Set Overfitting: When an excessively fine grid is tested across many iterations, the search can accidentally select hyperparameter values that overfit to the specific cross-validation splits, resulting in poorer performance on true unseen holdout data.
+
+Handling Incompatible Parameter Combinations: Certain hyperparameter choices are mutually exclusive (for instance, pairing an L1 penalty with a solver that only supports L2); a robust grid search must use conditional parameter grids to avoid wasting cycles on invalid combinations.
+
+Sensitivity to the Chosen Metric: Optimizing for different scoring metrics (such as Precision versus ROC-AUC) on the exact same grid can yield completely different "winning" hyperparameter sets, making your evaluation choice just as important as the parameter range itself.
+
+Data Leakage Prevention via Pipelines: When combined with preprocessing tasks like scaling or missing-value imputation, running Grid Search within a pipeline ensures that transformer steps are fit strictly on training folds, keeping validation folds completely uncontaminated.
+
+Early-Stopping Efficiency (Halving Search): Advanced variants (such as Successive Halving) improve upon standard grid search by testing all candidates on a small subset of the data first, iteratively discarding low-performing combinations before training the top contenders on full datasets.
+
+Guaranteed Determinism: Because it systematically checks fixed coordinates rather than relying on random sampling or probabilistic guessing, Grid Search yields 100% reproducible results every single time it is run on the same dataset.
 
 
 ![image](https://github.com/diantyapitaloka/Grid-Search/assets/147487436/3a00c493-bfaf-4e30-a690-9952bd513f63)
