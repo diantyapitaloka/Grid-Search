@@ -26,8 +26,7 @@
 - Contrast with Random Search: Unlike Random Search—which samples continuously from a probability distribution and often finds better configurations in fewer iterations—Grid Search spends equal computational effort evaluating unimportant or low-impact hyperparameters across a rigid grid.
 - Risk of Validation Set Overfitting: When an excessively fine grid is tested across many iterations, the search can accidentally select hyperparameter values that overfit to the specific cross-validation splits, resulting in poorer performance on true unseen holdout data.
 - Handling Incompatible Parameter Combinations: Certain hyperparameter choices are mutually exclusive (for instance, pairing an L1 penalty with a solver that only supports L2); a robust grid search must use conditional parameter grids to avoid wasting cycles on invalid combinations.
-
-Sensitivity to the Chosen Metric: Optimizing for different scoring metrics (such as Precision versus ROC-AUC) on the exact same grid can yield completely different "winning" hyperparameter sets, making your evaluation choice just as important as the parameter range itself.
+- Sensitivity to the Chosen Metric: Optimizing for different scoring metrics (such as Precision versus ROC-AUC) on the exact same grid can yield completely different "winning" hyperparameter sets, making your evaluation choice just as important as the parameter range itself.
 
 Data Leakage Prevention via Pipelines: When combined with preprocessing tasks like scaling or missing-value imputation, running Grid Search within a pipeline ensures that transformer steps are fit strictly on training folds, keeping validation folds completely uncontaminated.
 
