@@ -24,8 +24,7 @@
 - Combinatorial Explosion (The Curse of Dimensionality): Adding even one additional hyperparameter causes the total number of fits to grow exponentially rather than linearly, making pure grid search practically impossible for complex architectures like deep neural networks.
 - Vulnerability to Rigid Boundaries: Grid Search is strictly confined to the explicit values you define; if the true optimal setting lies just outside your chosen range or between two coarsely spaced points, the search will completely miss it.
 - Contrast with Random Search: Unlike Random Search—which samples continuously from a probability distribution and often finds better configurations in fewer iterations—Grid Search spends equal computational effort evaluating unimportant or low-impact hyperparameters across a rigid grid.
-
-Risk of Validation Set Overfitting: When an excessively fine grid is tested across many iterations, the search can accidentally select hyperparameter values that overfit to the specific cross-validation splits, resulting in poorer performance on true unseen holdout data.
+- Risk of Validation Set Overfitting: When an excessively fine grid is tested across many iterations, the search can accidentally select hyperparameter values that overfit to the specific cross-validation splits, resulting in poorer performance on true unseen holdout data.
 
 Handling Incompatible Parameter Combinations: Certain hyperparameter choices are mutually exclusive (for instance, pairing an L1 penalty with a solver that only supports L2); a robust grid search must use conditional parameter grids to avoid wasting cycles on invalid combinations.
 
